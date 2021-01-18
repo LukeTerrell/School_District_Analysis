@@ -21,7 +21,7 @@ As seen in the image below, the original data indicated the district had:
 
 However, once the data was affected data was removed from the analysis we saw changes to some of categories:
 
-![Unreliable Data Removed](/Resources/districtSummaryNew)
+![Unreliable Data Removed](/Resources/districtSummaryNew.png)
 
 - The average Math score decreased to 78.9%
 - The percentage of students passing Math lowered to 74.8%
@@ -31,16 +31,16 @@ However, once the data was affected data was removed from the analysis we saw ch
 
 Because the data affected by the academic dishonesty was only related to Thomas High School, we can see it was the only school that saw a change in their performance data in the `per_school_summary_df`.
 
-![Unreliable Data Not Removed](/Resources/perSchoolSummary)
+![Unreliable Data Not Removed](/Resources/perSchoolSummary.png)
 
-![Unreliable Data Removed](/Resources/perSchoolSummaryAdjusted)
+![Unreliable Data Removed](/Resources/perSchoolSummaryAdjusted.png)
 
 We can see that while the general performance of Thomas High School did drop due to the removal of the unreliable data, it was not a significant enough drop to move it out of the second best performing school.
 By entering the code `top_schools.head()` we can see the ranking of the top 5 schools have remained unchanged, despite a drop in the % Overall Passing Series
 
-![Unreliable Data Not Removed](/Resources/topSchools)
+![Unreliable Data Not Removed](/Resources/topSchools.png)
 
-![Unreliable Data Removed](/Resources/topSchoolsNew)
+![Unreliable Data Removed](/Resources/topSchoolsNew.png)
 
 The only grade averages that were affected by the removal of the unreliable data was the 9th grade, and again only Thomas High School was affected. Because the entire grade's scores were removed they were replaced by `nan` in the `math_scores_by_grade` and `reading_scores_by_grade` DataFrames.
 
