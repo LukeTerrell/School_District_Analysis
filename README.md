@@ -17,19 +17,19 @@ As seen in the image below, the original data indicated the district had:
 - An average Reading score of 81.9%
 - 75% of students passing Math
 - 86% of students passing Reading
-- 65% of students passing both Math and Reading
+- 65% of students passing Overall
 
-However, once the data was affected data was removed from the analysis we saw changes to some of categories:
+However, once the affected data was removed from the analysis we saw changes to some categories:
 
 ![Unreliable Data Removed](/Resources/districtSummaryNew.png)
 
 - The average Math score decreased to 78.9%
 - The percentage of students passing Math lowered to 74.8%
 - The percentage of students passing Reading lowered to 85.7%
-- The percentage of students passing both Math and Reading decreased to 64.9%
+- The percentage of students passing Overall decreased to 64.9%
 - There was no change in the average Reading score, the total budget, the total number of students, nor the total number of schools in the district
 
-Because the data affected by the academic dishonesty was only related to Thomas High School, we can see it was the only school that saw a change in their performance data in the `per_school_summary_df`.
+Because the affected data was only related to Thomas High School, we can see it was the only school that saw a change in their performance data in the `per_school_summary_df`.
 
 ![Unreliable Data Not Removed](/Resources/perSchoolSummary.png)
 
@@ -42,7 +42,7 @@ By entering the code `top_schools.head()` we can see the ranking of the top 5 sc
 
 ![Unreliable Data Removed](/Resources/topSchoolsNew.png)
 
-The only grade averages that were affected by the removal of the unreliable data was the 9th grade, and again only Thomas High School was affected. Because the entire grade's scores were removed they were replaced by `nan` in the `math_scores_by_grade` and `reading_scores_by_grade` DataFrames.
+The only grade averages that were affected by the removal of the unreliable data was the 9th grade, and again only Thomas High School was affected. Because the entire grade's scores were removed, the corresponding datapoints were replaced by `nan` in the `math_scores_by_grade` and `reading_scores_by_grade` DataFrames.
 
 The following analyses were not affected by the removal of the unreliable data:
 
